@@ -47,7 +47,7 @@ def profile(model, input_size, custom_ops={}, quiet=False):
 		if fn is not None:
 			hook_handles.append(m.register_forward_hook(fn))
 			if not quiet:
-				logging.info("Register FLOP counter for module %s" % str(m))
+				# logging.info("Register FLOP counter for module %s" % str(m))
 
 	def remove_keys(m):
 		if hasattr(m, 'total_ops'):
