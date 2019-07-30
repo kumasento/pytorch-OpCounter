@@ -61,6 +61,8 @@ def profile(model, input_size, custom_ops={}, quiet=False):
 	model.apply(add_hooks)
 
 	x = torch.zeros(input_size)
+	if next(model.parameters()).is_cuda:
+		x = x.cuda()
 	model(x)
 
 	total_ops = 0
