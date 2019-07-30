@@ -3,7 +3,7 @@ import argparse
 import torch
 import torch.nn as nn
 
-multiply_adds = 1
+multiply_adds = 2
 
 
 def count_conv2d(m, x, y):
